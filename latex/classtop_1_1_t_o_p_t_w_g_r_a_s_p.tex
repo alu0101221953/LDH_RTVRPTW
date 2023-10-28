@@ -1,0 +1,138 @@
+\doxysection{top.\+TOPTWGRASP Class Reference}
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p}\index{top.TOPTWGRASP@{top.TOPTWGRASP}}
+
+
+Clase que implementa el algoritmo GRASP para el problema TOPTW.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_af0ff5000bf59464aaf630ba7d1753b29} 
+{\bfseries TOPTWGRASP} (\textbf{ TOPTWSolution} sol)
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a11242fc809f6a16ff81136c4785fdc3e} 
+void {\bfseries GRASP} (int max\+Iterations, int max\+Size\+RCL)
+\item 
+int \textbf{ aleatory\+Selection\+RCL} (int max\+TRCL)
+\begin{DoxyCompactList}\small\item\em Selección aleatoria de un elemento de la lista restringida de candidatos. \end{DoxyCompactList}\item 
+int \textbf{ fuzzy\+Selection\+Best\+FDRCL} (Array\+List$<$ double[$\,$] $>$ rcl)
+\begin{DoxyCompactList}\small\item\em Selección del mejor elemento de la lista restringida de candidatos. \end{DoxyCompactList}\item 
+int \textbf{ fuzzy\+Selection\+Alpha\+Cut\+RCL} (Array\+List$<$ double[$\,$] $>$ rcl, double alpha)
+\begin{DoxyCompactList}\small\item\em Selección aleatoria de un elemento de la lista restringida de candidatos. \end{DoxyCompactList}\item 
+void \textbf{ compute\+Greedy\+Solution} (int max\+Size\+RCL)
+\begin{DoxyCompactList}\small\item\em Construcción de la solución inicial mediante una heurística greedy aleatorizada. \end{DoxyCompactList}\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_adaccdd26e4ad89ffb3e86c780dcd90d7} 
+void {\bfseries update\+Solution} (double[$\,$] candidate\+Selected, Array\+List$<$ Array\+List$<$ Double $>$ $>$ departure\+Times)
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae706fe2d8478acf0a026bb40e8fc9df7} 
+Array\+List$<$ double[$\,$] $>$ {\bfseries comprehensive\+Evaluation} (Array\+List$<$ Integer $>$ customers, Array\+List$<$ Array\+List$<$ Double $>$ $>$ departure\+Times)
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4c37722144024730a440f34343530d2c} 
+\textbf{ TOPTWSolution} {\bfseries get\+Solution} ()
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a01595711790fbdceebe112f930ff7f02} 
+void {\bfseries set\+Solution} (\textbf{ TOPTWSolution} solution)
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a52f508173fa05609d4bf7db92111a3b8} 
+int {\bfseries get\+Solution\+Time} ()
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a88f5adcd791131b1d8da3dc848d80701} 
+void {\bfseries set\+Solution\+Time} (int solution\+Time)
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ae0fad47956718e9e96ee5fb6022d9f5b} 
+double {\bfseries get\+Max\+Score} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a4319fa91e2578bb9b5570dc1af7b6f3b} 
+static double {\bfseries NO\+\_\+\+EVALUATED} = -\/1.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que implementa el algoritmo GRASP para el problema TOPTW. 
+
+Esta clase implementa el algoritmo GRASP para el problema TOPTW. El algoritmo GRASP se basa en la construcción de una solución inicial mediante una heurística greedy aleatorizada y posteriormente se aplica una búsqueda local para mejorar la solución. El algoritmo se ejecuta un número determinado de veces y se devuelve la mejor solución encontrada. 
+
+\doxysubsection{Member Function Documentation}
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a2c07bc597fa781b81a53ad1017e24a4f} 
+\index{top.TOPTWGRASP@{top.TOPTWGRASP}!aleatorySelectionRCL@{aleatorySelectionRCL}}
+\index{aleatorySelectionRCL@{aleatorySelectionRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{aleatorySelectionRCL()}
+{\footnotesize\ttfamily int top.\+TOPTWGRASP.\+aleatory\+Selection\+RCL (\begin{DoxyParamCaption}\item[{int}]{max\+TRCL }\end{DoxyParamCaption})}
+
+
+
+Selección aleatoria de un elemento de la lista restringida de candidatos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+TRCL} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve la posición del elemento seleccionado de la lista restringida de candidatos. 
+\end{DoxyReturn}
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_ade97c51a7d20660d7d306b756b4a6302} 
+\index{top.TOPTWGRASP@{top.TOPTWGRASP}!computeGreedySolution@{computeGreedySolution}}
+\index{computeGreedySolution@{computeGreedySolution}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{computeGreedySolution()}
+{\footnotesize\ttfamily void top.\+TOPTWGRASP.\+compute\+Greedy\+Solution (\begin{DoxyParamCaption}\item[{int}]{max\+Size\+RCL }\end{DoxyParamCaption})}
+
+
+
+Construcción de la solución inicial mediante una heurística greedy aleatorizada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Size\+RCL} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No devuelve nada. 
+\end{DoxyReturn}
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_a717d4390dfb843bed804afb598e27a87} 
+\index{top.TOPTWGRASP@{top.TOPTWGRASP}!fuzzySelectionAlphaCutRCL@{fuzzySelectionAlphaCutRCL}}
+\index{fuzzySelectionAlphaCutRCL@{fuzzySelectionAlphaCutRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{fuzzySelectionAlphaCutRCL()}
+{\footnotesize\ttfamily int top.\+TOPTWGRASP.\+fuzzy\+Selection\+Alpha\+Cut\+RCL (\begin{DoxyParamCaption}\item[{Array\+List$<$ double[$\,$] $>$}]{rcl,  }\item[{double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Selección aleatoria de un elemento de la lista restringida de candidatos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rcl} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve la posición del elemento seleccionado de la lista restringida de candidatos. 
+\end{DoxyReturn}
+\label{classtop_1_1_t_o_p_t_w_g_r_a_s_p_aa921b046fab55b437ea10e5cc286c014} 
+\index{top.TOPTWGRASP@{top.TOPTWGRASP}!fuzzySelectionBestFDRCL@{fuzzySelectionBestFDRCL}}
+\index{fuzzySelectionBestFDRCL@{fuzzySelectionBestFDRCL}!top.TOPTWGRASP@{top.TOPTWGRASP}}
+\doxysubsubsection{fuzzySelectionBestFDRCL()}
+{\footnotesize\ttfamily int top.\+TOPTWGRASP.\+fuzzy\+Selection\+Best\+FDRCL (\begin{DoxyParamCaption}\item[{Array\+List$<$ double[$\,$] $>$}]{rcl }\end{DoxyParamCaption})}
+
+
+
+Selección del mejor elemento de la lista restringida de candidatos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rcl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve la posición del elemento seleccionado de la lista restringida de candidatos. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/top/TOPTWGRASP.\+java\end{DoxyCompactItemize}
